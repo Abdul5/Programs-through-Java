@@ -1,24 +1,22 @@
 import java.util.*;
 public class PrintStairPathUsingRecur {
-	static void printStairPaths(int n,String psf) {
-        //Write your code here
-		if (n <= 0) {
-      if (n == 0) {
-        System.out.println(psf);
-      }
+	public static void StairPath(int n, String psf) {
+		if(n < 0) return;
+		if(n == 0) {
+			System.out.println(psf);
+			return;
+		}
+		StairPath(n - 1, psf + "1");
+		StairPath(n - 2, psf + "2");
+		StairPath(n - 3, psf + "3");
+	}
 
-      return;
-    }
+	public static void main(String[] args) {
+		// TODO Auto-generated method stub
+		Scanner sc = new Scanner(System.in);
+		int n = sc.nextInt();
+		StairPath(n,"");
 
-    printStairPaths(n - 1, psf + 1);
-    printStairPaths(n - 2, psf + 2);
-    printStairPaths(n - 3, psf + 3);
-    }
-    public static void main(String[] args) throws Exception {
-        Scanner sc = new Scanner(System.in);
-        int n;
-        n = sc.nextInt();
-        printStairPaths(n,"");
-    }
+	}
 
 }
