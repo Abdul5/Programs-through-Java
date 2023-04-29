@@ -5,12 +5,10 @@ public class All_Fibonacci_SeriesTill_Num {
 		// TODO Auto-generated method stub
 		Scanner sc = new Scanner(System.in);
 		int n = sc.nextInt();
-		int first = 0,second = 1, fib;
-		System.out.println(first);
-		System.out.println(second);
-		for(int i = 2;i < n;i++) {
-			fib = first + second;
-			System.out.println(fib);
+		int first = 0,second = 1;
+		for(int i = 1;i <= n;i++) {
+			System.out.println(first);
+			int fib = first + second;
 			first = second;
 			second = fib;
 		}
